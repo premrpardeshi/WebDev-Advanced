@@ -16,14 +16,14 @@ app.get("/user", (req, res) => {
   res.json({ name: "Prem" });
 });
 
-app.get("/metrics", async (req, res) => {
-  const metrics = await client.register.metrics();
+app.get("/metrics", async (req: Request, res: Response) => {
+  const metrics = await client.register.metrics(); 
   res.set("Content-Type", client.register.contentType);
   res.end(metrics);
 });
 
 app.post("/user", (req, res) => {
-  res.json({ name: "Prem" });
+  res.json({ name: "Prem", age: 21 });
 });
 
 app.listen(3000, () => {

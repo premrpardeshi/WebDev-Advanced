@@ -1,0 +1,1 @@
+set source in grafana as http://prometheus:9090

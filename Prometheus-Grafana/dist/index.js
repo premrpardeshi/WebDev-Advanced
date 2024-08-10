@@ -31,7 +31,7 @@ app.get("/metrics", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     res.end(metrics);
 }));
 app.post("/user", (req, res) => {
-    res.json({ name: "Prem" });
+    res.json({ name: "Prem", age: 21 });
 });
 app.listen(3000, () => {
     console.log("Listening...");
